@@ -1,15 +1,20 @@
+.header{
+    text-align: center;
+}
+
+
 h1{
 color: whitesmoke
 }
 
 h2{
+    text-align: center;
     color: whitesmoke
 }
 
  h3{
-  color: whitesmoke
  }
-
+ 
  h4{
 color: whitesmoke
  }
@@ -17,14 +22,20 @@ color: whitesmoke
 body{
     background-image:url(../img/fondo_pagina.jpg) ;  
     background-repeat: repeat;
-    background-size: 90%;
+    background-size: 90%; 
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .tenemos{
     color: red;
 }
 
-
+.menu{
+    text-align: center;
+}
 .menu ul li{
     display: inline;
     margin: 10px;
@@ -34,3 +45,26 @@ body{
     margin: 50px;
 }
 
+.footer{
+    text-align: center;
+    margin-top: auto;
+}
+
+#galeria .col-lg-4 {
+    margin: 0 !important;
+    padding: 25px;
+
+}
+
+#galeria img {
+width: 100%;
+height: 250px;
+}
+
+#galeria img:hover {
+    border: 7px solid #f7f7f7;
+}
+
+.logoheader{
+    width: 75px;
+}
