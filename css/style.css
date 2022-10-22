@@ -1,0 +1,36 @@
+h1{
+color: whitesmoke
+}
+
+h2{
+    color: whitesmoke
+}
+
+ h3{
+  color: whitesmoke
+ }
+
+ h4{
+color: whitesmoke
+ }
+
+body{
+    background-image:url(../img/fondo_pagina.jpg) ;  
+    background-repeat: repeat;
+    background-size: 90%;
+}
+
+.tenemos{
+    color: red;
+}
+
+
+.menu ul li{
+    display: inline;
+    margin: 10px;
+}
+
+.formulario{
+    margin: 50px;
+}
+
