@@ -1,36 +1,86 @@
+.header{
+    text-align: center;
+}
+
+
 h1{
-color: whitesmoke
+color: #023E73
 }
 
 h2{
-    color: whitesmoke
+    text-align: center;
+    color: #023E73
+
 }
 
  h3{
-  color: whitesmoke
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    padding: 15px;
+    color: #03658C
  }
-
+ 
  h4{
-color: whitesmoke
+color: #03658C
  }
 
 body{
-    background-image:url(../img/fondo_pagina.jpg) ;  
-    background-repeat: repeat;
-    background-size: 90%;
+    background-color: #A62177;
+    font-family: 'Roboto', sans-serif;
 }
 
 .tenemos{
-    color: red;
+    color: #03658C;
 }
 
-
-.menu ul li{
-    display: inline;
-    margin: 10px;
-}
 
 .formulario{
     margin: 50px;
+}
+
+.planes{
+    text-shadow: blueviolet;
+    color: whitesmoke;
+}
+
+#galeria .col-lg-4 {
+    margin: 0 !important;
+    padding: 25px;
+
+}
+
+#galeria img {
+width: 100%;
+height: 250px;
+}
+
+#galeria img:hover {
+    border: 1px solid #023E73;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 50px #023E73;
+
+}
+
+.logoheader{
+    width: 75px;
+}
+
+.imagenquienes{
+padding: 75px;
+width: 500px;
+height: 500px;
+}
+
+.imagen1quienesej{
+    margin: 0 auto;
+}
+
+.pregfre{
+    text-align: center;
+    padding: 75px;
+}
+
+.footer{
+ padding: 5%;
 }
 
