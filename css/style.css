@@ -177,3 +177,17 @@ height: 500px;
  padding: 5%;
 }
 
+.darkmode{
+    color: white;
+  background-color: black;
+}
+
+.darkMode .modal{
+    color: black;
+
+}
+
+.darkMode .card{
+    color: black;
+}
+

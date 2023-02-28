@@ -32,7 +32,7 @@
     href="../scss/custom.css"
   />
   </head>
-  <body>
+  <body class="">
     
   <header class="header">
     <nav class="navbar navbar-expand-lg navbarcolor">
@@ -72,29 +72,38 @@
             >Tienda</a
           >
             <a class="nav-link" href="./contacto.html">Contacto</a>
-            <a class="nav-link disabled"
-              >Administrador de progreso (En desarrollo)</a
-            >
-              <ul>
-              <ul style="list-style: none;"className="navbar-nav me-auto">  
-                <li className="nav-item " >
-                    <a id="botonCarrito" data-bs-toggle="modal" data-bs-target="#idModalCarrito" class="btn btn-secondary"><i class="fas fa-shopping-cart fa-1x"></i></a>
-                </li>
-            </ul>
+            
+            <div class="container m-1">
+              <div class="row">
+                  <div class="col-4">
+                      
+                      <button id="botonDarkMode" class="btn btn-dark">Modo Noche</button>
+        
+                  </div>
+                  <div class="col-3">
+                      
+                      <button id="botonLightMode" class="btn btn-light">Modo Dia</button>
+        
+                  </div>
+                  <div class="col-1">
+                      
+                      
+                      <button id="eliminarMode" class="btn btn-light">Resetear</button>  
+        
+                  </div>
+              </div>
           </div>
-        </div>
+        </div><button class="botonCarro"> <img
+          class="logoCarro2"
+          src="/img/carro.ico"
+          alt="carritocompra"
+        /></button>
       </div>
+      
     </nav>
   </header>
 
-<!--ordenarmayormenor-->
-  <select id="selectOrden" class="form-select form-select-sm" aria-label=".form-select-sm example">
-    <option selected>Ordenar por:</option>
-    <option value="1">Mayor a menor</option>
-    <option value="2">Menor a mayor</option>
-    <option value="3">Alfabeticamente</option>
-  </select>
-</ul>
+
 <br>
 <!--ver catalogo/ocultar catalogo-->
   <div class="container">
@@ -109,6 +118,7 @@
       </div>
 </div>      
   
+
 <div class="container">
   <div id="libros" class="row"></div>
 </div>   
