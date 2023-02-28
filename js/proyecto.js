@@ -1,5 +1,5 @@
 //MI SEGUIMIENTO PROYECTO
-//classconstructora
+//classconstructora libros y mancuernas
 class Libro {
     constructor(id, autor, titulo, precio, imagen) {
       //propiedades o atributos
@@ -9,7 +9,7 @@ class Libro {
         (this.precio = precio),
         (this.imagen = imagen);
     }
-    //métodos
+    //metodo
     mostrarInfoLibro() {
       console.log(
         `El titulo es ${this.titulo}, el autor es ${this.autor} y su precio es ${this.precio}`
@@ -51,7 +51,7 @@ class Libro {
     let tituloIngresado = prompt("Ingrese el titulo del libro");
     let precioIngresado = parseInt(prompt("Ingrese el precio del libro"));
   
-    //hacerlo con la function constructora
+    //function constructora
     const nuevoLibro = new Libro(
       array.length + 1,
       autorIngresado,
@@ -60,7 +60,7 @@ class Libro {
     );
     console.log(nuevoLibro);
   
-    //pushearlo o sumarlo al array
+    //pushearlo o sumarlo a un  array
     array.push(nuevoLibro);
     mostrarCatalogo(array);
   }
@@ -83,12 +83,12 @@ class Libro {
   
   
   function ordenarMenorMayor(array) {
-    //copia array original, para no modificar estanteria
+
     const menorMayor = [].concat(array);
     menorMayor.sort((param1, param2) => param1.precio - param2.precio);
     mostrarCatalogo(menorMayor);
   }
-  // ordenarMenorMayor(estanteria)
+
   function ordenarMayorMenor(array) {
     const mayorMenor = [].concat(array);
     mayorMenor.sort((a, b) => b.precio - a.precio);
@@ -97,8 +97,6 @@ class Libro {
   // ordenarMayorMenor(estanteria)
   function ordenarAlfabeticamenteTitulo(array) {
     const ordenadoAlfabeticamente = [].concat(array);
-    //ordenar algo que tiene un dato string
-    //forma de la a-z ascendente
     ordenadoAlfabeticamente.sort((a, b) => {
       if (a.titulo > b.titulo) {
         return 1;
@@ -112,8 +110,6 @@ class Libro {
     mostrarCatalogo(ordenadoAlfabeticamente);
   }
   
-  //---------------------------------------------------//MIPROYECTO CON DOM:
-  
   //capturo divLibros
   let librosDiv = document.getElementById("libros");
   let verCatalogoBtn = document.getElementById("verCatalogo");
@@ -121,10 +117,10 @@ class Libro {
   
   let guardarLibroBtn = document.getElementById("guardarLibroBtn");
   
-  //FUNCTION PROYECTO DOM
-  //imprimiendo los objetos en el DOM
+  //FUNCTIONDOM 
+
   function verCatalogo(array) {
-    //reseteo de div antes de imprimir de nuevo
+  
     librosDiv.innerHTML = "";
   
     for (let libro of array) {
@@ -133,9 +129,9 @@ class Libro {
        
       nuevoLibroDiv.className = "col-12 col-md-6 col-lg-4 my-3";
       nuevoLibroDiv.innerHTML = `
-        <div id="${libro.id}" class="card"style="width: 18rem;">
-            <img class="card-img-top img-fluid" style="height: 200px;"src="/img/libros/${libro.imagen}" alt="${libro.titulo} de ${libro.autor}">
-            <div class="card-body tampersonalizada">
+        <div id="${libro.id}" class="card">
+            <img class="card-img-top imgcards img-fluid" style="height: 200px;"src="/img/libros/${libro.imagen}" alt="${libro.titulo} de ${libro.autor}">
+            <div class="card-body">
                 <h4 class="card-title">${libro.titulo}</h4>
                 <p>Autor: ${libro.autor}</p>
                 <p class="">Precio: ${libro.precio}</p>
@@ -164,5 +160,45 @@ class Libro {
     librosDiv.innerHTML = ""; 
   });
   
+
+  localStorage.setItem("clavegen", "1")
+
+
+  //modooscuroyclaro
+let botonDarkMode = document.getElementById("botonDarkMode")
+let botonLightMode = document.getElementById("botonLightMode")
+let eliminarMode = document.getElementById("eliminarMode")
+
+let modoOscuro = JSON.parse(localStorage.getItem("modoOscuro"))
+console.log(modoOscuro)
+
+if(modoOscuro == true){
+    document.body.classList.add("darkMode")
+}
+
+botonDarkMode.addEventListener("click", ()=>{
+    console.log("Btn oscuro funciona")
+
+    document.body.classList.add("darkMode")
+
+    localStorage.setItem("modoOscuro", true)
+})
+
+botonLightMode.addEventListener("click", ()=>{
+    console.log("Btn claro funciona")
+    document.body.classList.remove("darkMode")
+    localStorage.setItem("modoOscuro", false)
+})
+eliminarMode.addEventListener("click", ()=>{
+
+    localStorage.removeItem("modoOscuro")
+})
+
+
+
+//json (aclaracion : este ejemplo esta como se dio en la clase, ya que el ejemplo)
+
+
+
  
 
